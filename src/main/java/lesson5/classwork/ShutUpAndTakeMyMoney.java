@@ -18,16 +18,27 @@ public class ShutUpAndTakeMyMoney {
         int amountOfMoney = sc.nextInt();
         int amountOfEuro = amountOfMoney / 100;
         int amountOfCents = amountOfMoney % 100;
-        int numberOfCents = 0;
 
         eurosCount[0] = amountOfEuro / euros[0];
         if (amountOfEuro % euros[0] == 1) eurosCount[1] = 1;
 
-        for (int i = 0; i < euros.length; i++) {
-            System.out.println("Number of " + euros[i] + " EUR = " + eurosCount[i]);
+        for (int i = 0; i < cents.length; i++) {
+            if (amountOfCents / cents[i] == 1) {
+                centsCount[i] = amountOfCents / cents[i];
+                amountOfCents = amountOfCents - cents[i];
+            }
         }
 
-
+        for (int i = 0; i < euros.length; i++) {
+            if (eurosCount[i] > 0) {
+                System.out.println("Number of " + euros[i] + " EUR = " + eurosCount[i]);
+            }
+        }
+        for (int i = 0; i < cents.length; i++) {
+            if (centsCount[i] > 0) {
+                System.out.println("Number of " + cents[i] + " cents = " + centsCount[i]);
+            }
+        }
     }
 
 }
