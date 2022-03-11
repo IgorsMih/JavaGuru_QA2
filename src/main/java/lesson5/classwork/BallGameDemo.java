@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class BallGameDemo {
 
     public static void main(String[] args) {
+
         int[] board = {0, 0, 0};
         int personGuess;
         Random random = new Random();
@@ -18,9 +19,7 @@ public class BallGameDemo {
             System.out.print("Please enter number from 1 to 3 -> ");
             Scanner sc = new Scanner(System.in);
             personGuess = sc.nextInt();
-
         } while ((personGuess < 1) || (personGuess > 3) );
-
 
         if (board[personGuess - 1] == 1) {
             System.out.print("Number " + personGuess + " is correct. ");
@@ -33,8 +32,6 @@ public class BallGameDemo {
         for (int i = 0; i < board.length; i++) {
             System.out.print("Cup " + (i + 1) + " = " + board[i] + ". ");
         }
-
-
     }
 
 }
