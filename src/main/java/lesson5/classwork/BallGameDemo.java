@@ -12,7 +12,7 @@ public class BallGameDemo {
         int personGuess;
         Random random = new Random();
         int ballPlace = random.nextInt(3);
-        board[random.nextInt(3)] = 1;
+        board[ballPlace] = 1;
 
         System.out.println("\nBall is under one of 3 cups. Try to guess");
         System.out.println("-----------------------------------------");
@@ -20,6 +20,7 @@ public class BallGameDemo {
             System.out.print("Please enter number from 1 to 3 -> ");
             Scanner sc = new Scanner(System.in);
             personGuess = sc.nextInt();
+            if ((personGuess < 1) || (personGuess > 3)) System.out.println("Entered not correct number");
         } while ((personGuess < 1) || (personGuess > 3) );
 
         if (board[personGuess - 1] == 1) {
