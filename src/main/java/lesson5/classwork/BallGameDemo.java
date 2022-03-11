@@ -1,5 +1,6 @@
 package lesson5.classwork;
 
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -11,7 +12,7 @@ public class BallGameDemo {
         int personGuess;
         Random random = new Random();
         int ballPlace = random.nextInt(3);
-        board[ballPlace] = 1;
+        board[random.nextInt(3)] = 1;
 
         System.out.println("\nBall is under one of 3 cups. Try to guess");
         System.out.println("-----------------------------------------");
@@ -28,10 +29,7 @@ public class BallGameDemo {
         }
         System.out.println("The ball was under " + (ballPlace + 1) + " cup");
         System.out.println("-----------------------------------------");
-
-        for (int i = 0; i < board.length; i++) {
-            System.out.print("Cup " + (i + 1) + " = " + board[i] + ". ");
-        }
+        System.out.println(Arrays.toString(board));
     }
 
 }
