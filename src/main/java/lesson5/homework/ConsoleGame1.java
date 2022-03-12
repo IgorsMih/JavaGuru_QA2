@@ -32,7 +32,7 @@ public class ConsoleGame1 {
 
             correctAnswer = false;
             do {
-                System.out.print("Please enter 0 - if computer guessed, 1 - if your number is bigger, 2 - if yor number is smaller -> ");
+                System.out.print("Please enter 0 - if computer guessed, 1 - if your number is bigger, 2 - if your number is smaller -> ");
                 myAnswer = sc.nextInt();
                 if (((myAnswer == 1) && (myGuessedNumber < computerGuessedNumber)) ||
                 ((myAnswer == 2) && (myGuessedNumber > computerGuessedNumber))) {
