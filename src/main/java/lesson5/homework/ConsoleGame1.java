@@ -13,7 +13,7 @@ public class ConsoleGame1 {
         int myGuessedNumber;
         int computerGuessedNumber;
         int minNumber = 1;
-        int maxNumber = 1000;
+        int maxNumber = 1001;
         int myAnswer;
 
         do {
