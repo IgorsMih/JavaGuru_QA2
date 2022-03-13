@@ -7,15 +7,15 @@ public class ConsoleGame2 {
 
     public static void main(String[] args) {
 
-        ConsoleGame2 cg = new ConsoleGame2();
         Scanner sc = new Scanner(System.in);
+        Random random = new Random();
 
         int myGuessedNumber;
         int computerGuessedNumber;
         int minNumber = 1;
         int maxNumber = 101;
 
-        computerGuessedNumber = cg.getRandomNumber(minNumber, maxNumber);
+        computerGuessedNumber = random.nextInt(maxNumber - minNumber);
         System.out.println("Computer guessed number from 1 to 100. You need to guess it.");
         System.out.println("------------------------------------------------------------");
 
@@ -41,11 +41,6 @@ public class ConsoleGame2 {
                 }
             }
         } while ((myGuessedNumber < minNumber) || (myGuessedNumber >= maxNumber));
-    }
-
-    public int getRandomNumber(int min,int max) {
-        Random random = new Random();
-        return random.nextInt(max - min) + min;
     }
 
 }

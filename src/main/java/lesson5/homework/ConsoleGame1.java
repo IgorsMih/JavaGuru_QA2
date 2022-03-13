@@ -7,8 +7,8 @@ public class ConsoleGame1 {
 
     public static void main(String[] args) {
 
-        ConsoleGame1 cg = new ConsoleGame1();
         Scanner sc = new Scanner(System.in);
+        Random random = new Random();
 
         int myGuessedNumber;
         int computerGuessedNumber;
@@ -26,7 +26,7 @@ public class ConsoleGame1 {
         } while ((myGuessedNumber < 1) || (myGuessedNumber > 1000));
 
         do {
-            computerGuessedNumber = cg.getRandomNumber(minNumber, maxNumber);
+            computerGuessedNumber = random.nextInt(maxNumber - minNumber) + minNumber;
             System.out.println("My guessed number = " + myGuessedNumber);
             System.out.println("Computer guessed number = " + computerGuessedNumber);
 
@@ -45,11 +45,6 @@ public class ConsoleGame1 {
         } while (myAnswer != 0);
         System.out.println("______________________________________________________");
         System.out.println("Computer guessed yor number. The number was " + computerGuessedNumber);
-    }
-
-    public int getRandomNumber(int min,int max) {
-        Random random = new Random();
-        return random.nextInt(max - min) + min;
     }
 
 }
