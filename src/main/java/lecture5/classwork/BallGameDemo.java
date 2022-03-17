@@ -1,4 +1,4 @@
-package lesson5.classwork;
+package lecture5.classwork;
 
 import java.util.Arrays;
 import java.util.Random;
