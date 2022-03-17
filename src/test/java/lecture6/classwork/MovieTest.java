@@ -1,5 +1,6 @@
-package lecture6;
+package lecture6.classwork;
 
+import lecture6.classwork.Movie;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -8,12 +9,11 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class MovieTest {
 
-    //        Create movie object
+//    Create movie object
     Movie movie = new Movie();
 
-
     public void printAll() {
-        //        Get all information from movies
+//        Get all information from movies
         System.out.println("Movie Name " + movie.getMovieName());
         System.out.println("Movie Director " + movie.getMovieDirector());
         System.out.println("Movie Genre " + movie.getMovieGenre());
@@ -25,7 +25,7 @@ public class MovieTest {
     @Before
     public void setUp() {
         printAll();
-        //        Set Parameters
+//        Set Parameters
         movie.setMovieName("Rocketman");
         movie.setMovieDirector("Dexter Fletcher");
         movie.setMovieGenre("Musical/Drama");
@@ -42,7 +42,7 @@ public class MovieTest {
     @Test
     public void firstTest() {
         printAll();
-//      Adding assertions
+//        Adding assertions
         assertThat(movie.getMovieName()).isEqualTo("Rocketman");
         assertThat(movie.getMovieDirector()).isNotEmpty();
         assertThat(movie.getMovieGenre()).contains("Musical");

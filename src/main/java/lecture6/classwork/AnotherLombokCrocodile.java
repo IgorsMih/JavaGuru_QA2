@@ -1,4 +1,4 @@
-package lecture6;
+package lecture6.classwork;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package lecture6;
+package lecture6.classwork;
 
 import org.junit.After;
 import org.junit.Before;
@@ -8,7 +8,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class CrocodileTest {
 
-    //    Crocodile crocodile = new Crocodile();
+//    Crocodile crocodile = new Crocodile();
     AnotherLombokCrocodile crocodile = new AnotherLombokCrocodile();
 
     @Before
@@ -27,7 +27,6 @@ public class CrocodileTest {
 
     @Test
     public void firstTest() {
-
 
         assertThat(crocodile.getColor()).isEqualTo("Green");
         assertThat(crocodile.getName()).isEqualTo("Gena");

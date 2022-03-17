@@ -1,4 +1,4 @@
-package lecture6;
+package lecture6.classwork;
 
 public class Movie {
 
