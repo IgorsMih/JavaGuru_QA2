@@ -24,4 +24,5 @@
 
 /.out/
 /out/
+
 /src/test/resources/chromedriver.exe
