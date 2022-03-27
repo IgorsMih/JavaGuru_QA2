@@ -15,7 +15,11 @@ public class SeleniumTask2 {
         String driverPath = "C:\\Java\\JavaGuru_QA2\\src\\test\\resources\\";
         System.setProperty("webdriver.chrome.driver", driverPath + "chromedriver.exe");
         WebDriver driver = new ChromeDriver();
-        driver.get("https://www.ss.com/lv/transport/cars/");
+        driver.get("https://www.ss.com");
+
+        driver.findElement(By.id("mtd_97")).click();
+        String currentUrl = driver.getCurrentUrl();
+        assertThat(currentUrl).isEqualTo("https://www.ss.com/lv/transport/cars/");
 
         driver.findElement(By.id("f_o_8_min")).sendKeys("6000");
         driver.findElement(By.id("f_o_8_max")).sendKeys("10000");
