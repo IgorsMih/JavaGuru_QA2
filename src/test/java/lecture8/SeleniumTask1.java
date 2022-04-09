@@ -38,9 +38,13 @@ public class SeleniumTask1 {
         homePagePom.openPageByCategory("cars");
         carsPagePom.validatePageUrl();
         carsPagePom.setPrice("6000", "10000");
-        carsPagePom.selectYear("2001");
+        carsPagePom.validatePrice("6000", "10000");
+        carsPagePom.selectYearMin("2001");
+        carsPagePom.selectYearMax("2010");
+        carsPagePom.selectMinEngine("2.0");
         carsPagePom.selectMaxEngine("3.0");
         carsPagePom.selectColorBalta("6318");
+        carsPagePom.pressMekletButton();
 
         try {
             Thread.sleep(5000);
