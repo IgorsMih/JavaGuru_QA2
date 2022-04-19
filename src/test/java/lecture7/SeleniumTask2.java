@@ -1,4 +1,4 @@
-package lesson7;
+package lecture7;
 
 import org.junit.Test;
 import org.openqa.selenium.By;

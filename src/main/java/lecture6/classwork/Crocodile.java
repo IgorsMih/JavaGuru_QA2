@@ -1,4 +1,4 @@
-package lesson6.classwork;
+package lecture6.classwork;
 
 public class Crocodile {
 

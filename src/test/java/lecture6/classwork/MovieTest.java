@@ -1,4 +1,4 @@
-package lesson6.classwork;
+package lecture6.classwork;
 
 import org.junit.After;
 import org.junit.Before;
