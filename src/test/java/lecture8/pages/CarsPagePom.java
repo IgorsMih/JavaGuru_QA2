@@ -77,10 +77,8 @@ public class CarsPagePom extends BasePage {
 
     public void validatePrice(String min, String max) {
         pressMekletButton();
-        String priceMinText = driver.findElement(priceMin).getAttribute("value");
-        assertThat(priceMinText).isEqualTo(min);
-        String priceMaxText = driver.findElement(priceMax).getAttribute("value");
-        assertThat(priceMaxText).isEqualTo(max);
+        assertThat(driver.findElement(priceMin).getAttribute("value")).isEqualTo(min);
+        assertThat(driver.findElement(priceMax).getAttribute("value")).isEqualTo(max);
     }
 
 }
