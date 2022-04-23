@@ -17,20 +17,19 @@ public class BonusTaskOfPain {
         System.setProperty("webdriver.chrome.driver", driverPath + "chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("https://220.lv/");
+        driver.manage().window().maximize();
 
         Actions action = new Actions(driver);
         WebElement element1= driver.findElement(By.xpath("//ul[@class='menu submenu ']")).findElement(By.id("department-4579"));
         action.moveToElement(element1).click().perform();
 
-
 //        driver.findElement(By.xpath("//div[@class='image-wrap']")).click();
-
 
 //        driver.findElement(By.xpath("//ul[@class='menu submenu ']/li[12]")).findElement(By.xpath("//a[@data-cy='menu-item']"));
 
 
         try {
-            Thread.sleep(10000);
+            Thread.sleep(5000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
