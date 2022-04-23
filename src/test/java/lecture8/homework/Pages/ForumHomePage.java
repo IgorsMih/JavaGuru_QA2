@@ -4,13 +4,10 @@ import org.openqa.selenium.By;
 
 public class ForumHomePage extends ForumBasePage {
 
-    private final By categoryIenakt = By.className("btn btn-login btn-default");
+    private final By toLoginPage = By.xpath("//div[@class='btn-login btn btn-default popover-link hidden-xs hidden-sm']");
 
-    public void openPageByCategory(String category) {
-        if ("dogs".equals(category)) {
-            driver.findElement(categoryIenakt).click();
-
-        }
-
+    public void openPageByCategory() {
+            driver.findElement(toLoginPage).click();
     }
+
 }
