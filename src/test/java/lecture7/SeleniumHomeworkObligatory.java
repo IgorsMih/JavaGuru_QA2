@@ -15,14 +15,14 @@ public class SeleniumHomeworkObligatory {
         System.setProperty("webdriver.chrome.driver", driverPath + "chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.aliexpress.com/");
+        driver.manage().window().maximize();
 
         driver.findElement(By.xpath("//img[@class='_24EHh']")).click();
         driver.findElement(By.xpath("//img[@class='btn-close']")).click();
         driver.findElement(By.xpath("//img[@class='close-btn']")).click();
 
         driver.findElement(By.id("search-key")).sendKeys("tattoo");
-        String searchField = driver.findElement(By.id("search-key")).getAttribute("value");
-        assertThat(searchField).isEqualTo("tattoo");
+        assertThat(driver.findElement(By.id("search-key")).getAttribute("value")).isEqualTo("tattoo");
         driver.findElement(By.xpath("//input[@class = 'search-button']")).click();
 
         driver.findElement(By.xpath("//input[@placeholder='min']")).sendKeys("10");
