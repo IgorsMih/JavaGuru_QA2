@@ -30,7 +30,6 @@ public class SeleniumTask1 {
 // Get textbox text
         String ageText = driver.findElement(By.id("f_o_1276_min")).getAttribute("value");
         assertThat(ageText).isEqualTo("1");
-
 //        driver.findElement(By.cssSelector("input[class = 'b s12']")).click();
         driver.findElement(By.xpath("//input[@class = 'b s12']")).click();
 
