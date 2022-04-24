@@ -1,8 +1,6 @@
 package lecture10;
 
-
 import org.junit.runner.RunWith;
-
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
@@ -12,6 +10,4 @@ import io.cucumber.junit.CucumberOptions;
         glue = {"lecture10\\steps"},
         tags = "@SsLv"
 )
-public class TestRunner {
-
-}
+public class TestRunner { }

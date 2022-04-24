@@ -28,7 +28,7 @@ public class ForumTest {
         forumProfilePage.selectDD("7");
         forumProfilePage.selectMonth("7");
         forumProfilePage.selectYear("2000");
-        forumProfilePage.selectLanguage("1000");
+        forumProfilePage.selectLanguage("Angļu");
         forumProfilePage.selectGenderMail();
         forumProfilePage.pressApstiprinatButton();
 
@@ -46,7 +46,7 @@ public class ForumTest {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        forumBasePage.closeChrome();
+//        forumBasePage.closeChrome();
     }
 
 }
