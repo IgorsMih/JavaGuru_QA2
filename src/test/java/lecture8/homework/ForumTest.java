@@ -46,7 +46,7 @@ public class ForumTest {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-//        forumBasePage.closeChrome()
+        forumBasePage.closeChrome();
     }
 
 }
