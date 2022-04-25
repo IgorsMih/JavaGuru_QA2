@@ -14,30 +14,33 @@ public class CarsPageSteps {
         carsPagePom.validatePageUrl();
     }
 
-    @When("^Set min price to (.*) and max price to (.*)$")
-    public void setMinPriceToAndMaxPriceTo(String minPrice, String maxPrice) {
+    @When("^Set Cars min price to (.*) and max price (.*)$")
+    public void setCarsMinPriceToAndMaxPrice(String minPrice, String maxPrice) {
         carsPagePom.setPrice(minPrice, maxPrice);
     }
 
-    @And("Set year from {int}")
-    public void setYearFrom(int arg0) {
-
+    @And("^Set year from (.*)$")
+    public void setYearFrom(String year) {
+        carsPagePom.selectYearMin(year);
     }
 
-    @And("Change max engine to {double}")
-    public void changeMaxEngineTo(int arg0, int arg1) {
-
+    @And("^Change min engine to (.*)$")
+    public void changeMinEngineTo(String minEngine) {
+        carsPagePom.selectMinEngine(minEngine);
     }
 
-    @And("Change color to Balta")
-    public void changeColorToBalta() {
+    @And("^Change max engine to (.*)$")
+    public void changeMaxEngineTo(String maxEngine) {
+        carsPagePom.selectMinEngine(maxEngine);
+    }
 
+    @And("^Change color to Balta$")
+    public void changeColorToBalta(String color) {
+        carsPagePom.selectColorBalta(color);
     }
 
     @Then("Press submit button")
     public void pressSubmitButton() {
+        carsPagePom.pressMekletButton();
     }
-
-
-
 }
