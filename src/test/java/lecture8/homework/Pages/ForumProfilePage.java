@@ -69,10 +69,10 @@ public class ForumProfilePage extends ForumBasePage {
 
     public void selectLanguage(String lang) {
         Select newLang = new Select(driver.findElement(langSelect));
-        if ("Angļu".equals(lang)) {
-            newLang.selectByVisibleText("Angļu");
+        if ("ENG".equals(lang)) {
+            newLang.selectByValue("1000");
         } else {
-            newLang.selectByVisibleText("Latviešu");
+            newLang.selectByValue("1002");
         }
     }
 

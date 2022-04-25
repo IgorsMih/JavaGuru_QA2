@@ -14,7 +14,7 @@ public class DogsPageSteps {
         dogsPagePom.validatePageUrl();
     }
 
-    @When("^Set min price to (.*) and max price (.*)}$")
+    @When("^Set min price to (.*) and max price (.*)$")
     public void setMinPriceToAndMaxPrice(String minPrice, String maxPrice) {
         dogsPagePom.setPrice(minPrice, maxPrice);
     }

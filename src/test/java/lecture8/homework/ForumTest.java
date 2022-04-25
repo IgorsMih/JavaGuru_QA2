@@ -28,7 +28,7 @@ public class ForumTest {
         forumProfilePage.selectDD("7");
         forumProfilePage.selectMonth("7");
         forumProfilePage.selectYear("2000");
-        forumProfilePage.selectLanguage("Angļu");
+        forumProfilePage.selectLanguage("ENG");
         forumProfilePage.selectGenderMail();
         forumProfilePage.pressApstiprinatButton();
 

@@ -14,12 +14,12 @@ public class CarsPageSteps {
         carsPagePom.validatePageUrl();
     }
 
-    @When("^Set min price to (.*) and max price (.*)$")
-    public void setMinPriceToAndMaxPrice(String minPrice, String maxPrice) {
+    @When("^Set min price to (.*) and max price to (.*)$")
+    public void setMinPriceToAndMaxPriceTo(String minPrice, String maxPrice) {
         carsPagePom.setPrice(minPrice, maxPrice);
     }
 
-    @And("Set year from  {int}")
+    @And("Set year from {int}")
     public void setYearFrom(int arg0) {
 
     }
@@ -39,7 +39,5 @@ public class CarsPageSteps {
     }
 
 
-    @When("Set min price to {int} and max price to {int}")
-    public void setMinPriceToAndMaxPriceTo(int arg0, int arg1) {
-    }
+
 }
