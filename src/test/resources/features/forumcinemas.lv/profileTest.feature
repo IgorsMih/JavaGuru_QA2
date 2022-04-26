@@ -5,28 +5,28 @@ Feature: Test forumcinemas.lv login page filtering and validates it
   Background: Open login page, enter login name and password and submit it
     Given Open Home Page
     And Open Login Page
-    When Enter Login Name
-    And Enter Password
+    When Set Login Name to mihejevs.igors@gmail.com
+    And Set Password to IM020660
     Then Press Submit Button
 
   Scenario: Open profile page, change all parameters, validate and close all pages
     Given Open Profile Page
     When Click Change My Data
-    And Enter FirstName and SecondName
-    And Enter Mobile Number
-    And Enter City Name
-    And Select Day of Birthday
-    And Select Month of Birthday
-    And Select Year of Birthday
-    And Select Language
+    And Set FirstName to Igor and SecondName to Mihejev
+    And Set Mobile to 29111111
+    And Set City to Rezekne
+    And Select Day of Birthday to 7
+    And Select Month of Birthday to 7
+    And Select Year of Birthday to 2000
+    And Select Language to ENG
     And Select Gender
     Then Press Apstiprinat Button
-    And Validate Name
-    And Validate Mobile
-    And Validate City
-    And Validate Day of Birthday
-    And Validate Month of Birthday
-    And Validate Year of Birthday
-    And Validate language
+    And Validate Names Igor and Mihejev
+    And Validate Mobile 29111111
+    And Validate City Rezekne
+    And Validate Birthday 7
+    And Validate BirthdayM 7
+    And Validate BirthdayY 2000
+    And Validate Language 1000
     And Validate Gender
     And Close All Pages

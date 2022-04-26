@@ -14,39 +14,39 @@ public class ProfilePageStep {
         forumProfilePage.clickChangeMyData();
     }
 
-    @And("Enter FirstName and SecondName")
-    public void enterFirstNameAndSecondName() {
-        forumProfilePage.inputNames("Igor", "Mihejev");
+    @And("^Set FirstName to (.*) and SecondName to (.*)$")
+    public void setFirstNameAndSecondName(String firstName, String secondName) {
+        forumProfilePage.validateNames(firstName, secondName);
     }
 
-    @And("Enter Mobile Number")
-    public void enterMobileNumber() {
-        forumProfilePage.inputPhone("29111111");
+    @And("^Set Mobile to (.*)$")
+    public void setMobileTo(String mobile) {
+        forumProfilePage.inputPhone(mobile);
     }
 
-    @And("Enter City Name")
-    public void enterCityName() {
-        forumProfilePage.inputCity("Rezekne");
+    @And("^Set City to (.*)$")
+    public void setCityToRezekne(String city) {
+        forumProfilePage.inputCity(city);
     }
 
-    @And("Select Day of Birthday")
-    public void selectDayOfBirthday() {
-        forumProfilePage.selectDD("7");
+    @And("^Select Day of Birthday to (.*)$")
+    public void selectDayOfBirthday(String day) {
+        forumProfilePage.selectDD(day);
     }
 
-    @And("Select Month of Birthday")
-    public void selectMonthOfBirthday() {
-        forumProfilePage.selectMonth("7");
+    @And("^Select Month of Birthday to (.*)$")
+    public void selectMonthOfBirthday(String month) {
+        forumProfilePage.selectMonth(month);
     }
 
-    @And("Select Year of Birthday")
-    public void selectYearOfBirthday() {
-        forumProfilePage.selectYear("2000");
+    @And("^Select Year of Birthday to (.*)$")
+    public void selectYearOfBirthday(String year) {
+        forumProfilePage.selectYear(year);
     }
 
-    @And("Select Language")
-    public void selectLanguage() {
-        forumProfilePage.selectLanguage("ENG");
+    @And("^Select Language to (.*)$")
+    public void selectLanguageToENG(String language) {
+        forumProfilePage.selectLanguage(language);
     }
 
     @And("Select Gender")
@@ -59,39 +59,39 @@ public class ProfilePageStep {
         forumProfilePage.pressApstiprinatButton();
     }
 
-    @And("Validate Name")
-    public void validateName() {
-        forumProfilePage.validateNames("Igor", "Mihejev");
+    @And("^Validate Names (.*) and (.*)$")
+    public void validateNames(String fName, String sName) {
+        forumProfilePage.validateNames(fName, sName);
     }
 
-    @And("Validate Mobile")
-    public void validateMobile() {
-        forumProfilePage.validatePhone("29111111");
+    @And("^Validate Mobile (.*)$")
+    public void validateMobile(String mobile) {
+        forumProfilePage.validatePhone(mobile);
     }
 
-    @And("Validate City")
-    public void validateCity() {
-        forumProfilePage.validateCity("Rezekne");
+    @And("^Validate City (.*)$")
+    public void validateCityRezekne(String city) {
+        forumProfilePage.validateCity(city);
     }
 
-    @And("Validate Day of Birthday")
-    public void validateDayOfBirthday() {
-        forumProfilePage.validateDD("7");
+    @And("^Validate Birthday (.*)$")
+    public void validateBirthdayDay(String day) {
+        forumProfilePage.validateDD(day);
     }
 
-    @And("Validate Month of Birthday")
-    public void validateMonthOfBirthday() {
-        forumProfilePage.validateMonth("7");
+    @And("^Validate BirthdayM (.*)$")
+    public void validateBirthdayMonth(String month) {
+        forumProfilePage.validateMonth(month);
     }
 
-    @And("Validate Year of Birthday")
-    public void validateYearOfBirthday() {
-        forumProfilePage.validateYear("2000");
+    @And("^Validate BirthdayY (.*)$")
+    public void validateBirthdayYear(String year) {
+        forumProfilePage.validateYear(year);
     }
 
-    @And("Validate language")
-    public void validateLanguage() {
-        forumProfilePage.validateLanguage("1000");
+    @And("^Validate Language (.*)$")
+    public void validateLanguageEng(String language) {
+        forumProfilePage.validateLanguage(language);
     }
 
     @And("Validate Gender")

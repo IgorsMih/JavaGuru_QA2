@@ -9,18 +9,21 @@ public class LoginPageStep {
 
     ForumLoginPage forumLoginPage = new ForumLoginPage();
 
-    @When("Enter Login Name")
-    public void enterLoginName() {
-        forumLoginPage.enterLoginName("mihejevs.igors@gmail.com");
+    @When("^Set Login Name to (.*)$")
+    public void setLoginName(String loginName) {
+        forumLoginPage.enterLoginName(loginName);
     }
 
-    @And("Enter Password")
-    public void enterPassword() {
-        forumLoginPage.enterPassword("IM020660");
+    @And("^Set Password to (.*)$")
+    public void setPassword(String password) {
+        forumLoginPage.enterPassword(password);
     }
 
     @Then("Press Submit Button")
     public void pressSubmitButton() {
         forumLoginPage.loginSubmit();
     }
+
+
+
 }
