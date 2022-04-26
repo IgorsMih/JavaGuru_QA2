@@ -10,4 +10,5 @@ Feature: Test ss.lv cars page filtering and validates it
     And Set year from 2001
     And Change min engine to 2.0
     And Change max engine to 3.0
+    And Change color to Balta with value 6318
     Then Press submit button

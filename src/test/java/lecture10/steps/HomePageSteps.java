@@ -24,5 +24,4 @@ public class HomePageSteps {
     public void openCarsCategory() {
         homePagePom.openPageByCategory("cars");
     }
-
 }

@@ -39,6 +39,11 @@ public class CarsPageSteps {
         carsPagePom.selectColorBalta(color);
     }
 
+    @And("^Change color to Balta with value (.*)$")
+    public void changeColorToBaltaWithValue(String value) {
+        carsPagePom.selectColorBalta(value);
+    }
+
     @Then("Press submit button")
     public void pressSubmitButton() {
         carsPagePom.pressMekletButton();
