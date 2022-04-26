@@ -16,7 +16,7 @@ public class ProfilePageStep {
 
     @And("^Set FirstName to (.*) and SecondName to (.*)$")
     public void setFirstNameAndSecondName(String firstName, String secondName) {
-        forumProfilePage.validateNames(firstName, secondName);
+        forumProfilePage.inputNames(firstName, secondName);
     }
 
     @And("^Set Mobile to (.*)$")
