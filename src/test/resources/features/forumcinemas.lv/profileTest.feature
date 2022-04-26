@@ -27,6 +27,6 @@ Feature: Test forumcinemas.lv login page filtering and validates it
     And Validate Birthday 7
     And Validate BirthdayM 7
     And Validate BirthdayY 2000
-    And Validate Language 1000
+    And Validate Language ENG
     And Validate Gender
     And Close All Pages

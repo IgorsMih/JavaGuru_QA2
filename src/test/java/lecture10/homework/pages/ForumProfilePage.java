@@ -110,6 +110,11 @@ public class ForumProfilePage extends ForumBasePage {
     }
 
     public void validateLanguage(String lang) {
+        if ("ENG".equals(lang)) {
+            lang = "1000";
+        } else if ("RUS".equals(lang)){
+            lang = "1004";
+        } else lang = "1002";
         assertThat(driver.findElement(langSelect).getAttribute("value")).isEqualTo(lang);
     }
 
